@@ -3,15 +3,25 @@
 
 #include "stdafx.h"
 #include <iostream>
+#include <string>
+
 using namespace std;
 
-int sum(int a, int b) {
-    return a + b;
+
+string sum(int a, int b) {
+    return to_string(a) + " + " + to_string(b) + " = " + to_string(a + b);
 }
 
 int main()
 {
-    cout << sum(54,25) << endl;
+    setlocale(LC_ALL, "Russian");
+
+    int a, b;
+    cout << "¬ведите первое число: ";
+    cin >> a;
+    cout << "¬ведите второе число: ";
+    cin >> b;
+    cout << endl << sum(a, b) << endl;
     system("pause");
     return 0;
 }
