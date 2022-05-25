@@ -41,6 +41,10 @@ public:
         << this->name << " (" << this->model << ") - "
         << this->color << " (h:" << this->height << ", s:" << this->speed << ") $" << this->price << endl;
     }
+
+    ~Car () {
+        cout << "Done" << endl;
+    }
 };
 
 string sum(int a, int b) {
