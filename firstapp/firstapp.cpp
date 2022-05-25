@@ -8,43 +8,43 @@
 using namespace std;
 
 class Car {
-protected:
-    string name = "";
-    string model = "";
-    string color = "";
-    int price = 0;
-    int height = 0;
-    float speed = 0;
-public:
-    Car() {}
+    protected:
+        string name = "";
+        string model = "";
+        string color = "";
+        int price = 0;
+        int height = 0;
+        float speed = 0;
+    public:
+        Car() {}
 
-    Car(string name, string model, string color, int height, float speed, int price) {
-        this->name = name;
-        this->model = model;
-        this->color = color;
-        this->height = height;
-        this->speed = speed;
-        this->price = price;
-    }
+        Car(string name, string model, string color, int height, float speed, int price) {
+            this->name = name;
+            this->model = model;
+            this->color = color;
+            this->height = height;
+            this->speed = speed;
+            this->price = price;
+        }
 
-    void setValues(string name, string model, string color, int height, float speed, int price) {
-        this->name = name;
-        this->model = model;
-        this->color = color;
-        this->height = height;
-        this->speed = speed;
-        this->price = price;
-    }
+        void setValues(string name, string model, string color, int height, float speed, int price) {
+            this->name = name;
+            this->model = model;
+            this->color = color;
+            this->height = height;
+            this->speed = speed;
+            this->price = price;
+        }
 
-    void print() {
-        cout
-        << this->name << " (" << this->model << ") - "
-        << this->color << " (h:" << this->height << ", s:" << this->speed << ") $" << this->price << endl;
-    }
+        void print() {
+            cout
+            << this->name << " (" << this->model << ") - "
+            << this->color << " (h:" << this->height << ", s:" << this->speed << ") $" << this->price << endl;
+        }
 
-    ~Car () {
-        cout << "Done" << endl;
-    }
+        ~Car () {
+            cout << "Done" << endl;
+        }
 };
 
 class Motorcycle: public Car {
