@@ -8,7 +8,7 @@
 using namespace std;
 
 class Car {
-private:
+protected:
     string name = "";
     string model = "";
     string color = "";
@@ -47,13 +47,16 @@ public:
     }
 };
 
-string sum(int a, int b) {
-    // cout << a << " + " << b << " = " << a + b << endl;
-    return to_string(a) + " + " + to_string(b) + " = " + to_string(a + b);
-}
+class Motorcycle: public Car {
 
-int main()
-{
+};
+
+
+int main() {
+    Motorcycle bmw;
+    bmw.setValues("BMW", "M 1000 RR", "Black", 170, 306, 50900);
+    bmw.print();
+
     Car honda("Honda", "CR-V", "Red", 1500, 250.5, 25000);
     honda.print();
 
