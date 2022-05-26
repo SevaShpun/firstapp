@@ -1,6 +1,5 @@
 // firstapp.cpp: определяет точку входа для консольного приложения.
 
-
 #include "stdafx.h"
 #include <iostream>
 #include <string>
@@ -42,28 +41,23 @@ class Car {
             << this->color << " (h:" << this->height << ", s:" << this->speed << ") $" << this->price << endl;
         }
 
-        ~Car () {
-            cout << "Done" << endl;
-        }
+        ~Car() {}
 };
 
-class Motorcycle: public Car {
-
-};
-
+class Motorcycle: public Car {};
 
 int main() {
     Motorcycle bmw;
+    Car toyota;
+    Car mitsubishi;
+    
     bmw.setValues("BMW", "M 1000 RR", "Black", 170, 306, 50900);
     bmw.print();
 
-    Car honda("Honda", "CR-V", "Red", 1500, 250.5, 25000);
-    honda.print();
-
-    Car toyota("Toyota", "CAMRY", "Red", 1800, 280, 30000);
+    toyota.setValues("Toyota", "CAMRY", "Red", 1800, 280, 30000);
     toyota.print();
 
-    Car mitsubishi("Mitsubishi", "ASX", "Blue", 2000, 195, 47000);
+    mitsubishi.setValues("Mitsubishi", "ASX", "Blue", 2000, 195, 47000);
     mitsubishi.print();
     return 0;
 }
