@@ -3,62 +3,19 @@
 #include "stdafx.h"
 #include <iostream>
 #include <string>
+#include "character.cpp"
 
 using namespace std;
 
-class Car {
-    protected:
-        string name = "";
-        string model = "";
-        string color = "";
-        int price = 0;
-        int height = 0;
-        float speed = 0;
-    public:
-        Car() {}
-
-        Car(string name, string model, string color, int height, float speed, int price) {
-            this->name = name;
-            this->model = model;
-            this->color = color;
-            this->height = height;
-            this->speed = speed;
-            this->price = price;
-        }
-
-        void setValues(string name, string model, string color, int height, float speed, int price) {
-            this->name = name;
-            this->model = model;
-            this->color = color;
-            this->height = height;
-            this->speed = speed;
-            this->price = price;
-        }
-
-        void print() {
-            cout
-            << this->name << " (" << this->model << ") - "
-            << this->color << " (h:" << this->height << ", s:" << this->speed << ") $" << this->price << endl;
-        }
-
-        ~Car() {}
-};
-
-class Motorcycle: public Car {};
-
 int main() {
-    Motorcycle bmw;
-    Car toyota;
-    Car mitsubishi;
+    Weapon sword("Sword", 'A', 8, 1.5);;
+    Weapon axe("Axe", 'A', 8, 1);
+
+    Character player_1("Dev", "Paladin", sword, 100);
+    player_1.print();
     
-    bmw.setValues("BMW", "M 1000 RR", "Black", 170, 306, 50900);
-    bmw.print();
-
-    toyota.setValues("Toyota", "CAMRY", "Red", 1800, 280, 30000);
-    toyota.print();
-
-    mitsubishi.setValues("Mitsubishi", "ASX", "Blue", 2000, 195, 47000);
-    mitsubishi.print();
+    Character player_2("Barbar", "Ogre", axe, 100);
+    player_2.print();
     return 0;
 }
 // clear; g++ -o Debug/firstapp firstapp.cpp; ./Debug/firstapp.exe
