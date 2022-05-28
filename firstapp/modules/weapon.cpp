@@ -8,27 +8,22 @@ class Weapon {
         string weaponName = "";
         char weaponType = ' ';
         int damage = 0;
-        float distance = 0;
         Weapon() {}
 
-        Weapon(string weapon, char weaponType, int damage, float distance) {
+        Weapon(string weapon, char weaponType, int damage) {
             this->weaponName = weapon;
             this->weaponType = weaponType;
             this->damage = damage;
-            this->distance = distance;
         }
 
-        void setValues(string weapon, char weaponType, int damage, float distance) {
+        void setValues(string weapon, char weaponType, int damage) {
             this->weaponName = weapon;
             this->weaponType = weaponType;
             this->damage = damage;
-            this->distance = distance;
         }
 
         void print() {
-            cout
-            << this->weaponName << " (" << this->weaponType << "), "
-            << this->damage << " (" << this->distance << ")" << endl;
+            cout << this->weaponName << " (" << this->weaponType << "), " << this->damage << endl;
         }
 
         ~Weapon() {}
